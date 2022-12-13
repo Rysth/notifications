@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+:root {
+  --CL-primary-red: hsl(1, 90%, 64%);
+  --CL-primary-blue: hsl(219, 85%, 26%);
+
+  --CL-neutral-100: hsl(0, 0%, 100%);
+  --CL-neutral-200: hsl(210, 60%, 98%);
+  --CL-neutral-300: hsl(211, 68%, 94%);
+  --CL-neutral-400: hsl(205, 33%, 90%);
+  --CL-neutral-500: hsl(219, 14%, 63%);
+  --CL-neutral-600: hsl(219, 12%, 42%);
+  --CL-neutral-700: hsl(224, 21%, 14%);
+
+  --FF-general: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  background-color: var(--CL-neutral-200);
+  font-family: var(--FF-general);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2 {
+  font-size: clamp(1.8rem, 1.8rem + 1vw, 2rem);
+}
+
+p,
+span {
+  font-size: clamp(1.35rem, 1.35rem + 1vw, 1.45rem);
+}
+
+span {
+  cursor: pointer;
+}
+
+.container {
+  width: min(100%, 70rem);
+  margin: 0 auto;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.color-blue {
+  color: var(--CL-primary-blue);
+}
+
+.color-mist {
+  color: var(--CL-neutral-600);
+}
+
+span:hover {
+  color: var(--CL-primary-blue);
+}
+
+.notification-component {
+  background-color: var(--CL-neutral-100);
+  box-shadow: 0 0 10px 0 var(--CL-neutral-300);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.flex-system {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-system {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  column-gap: 2rem;
+}
+
+.header .notify {
+  background-color: var(--CL-primary-blue);
+  color: var(--CL-neutral-100);
+  padding: 0.4rem 1rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0 1rem;
+}
+
+.header p {
+  color: var(--CL-neutral-600);
+}
+
+.content {
+  margin: 3rem 0 0 0;
+}
+
+.notification-card {
+  background-color: var(--CL-neutral-200);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.notification-card--inactive {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.notification-card--image {
+  grid-template-columns: 4.5rem 1fr 4.5rem;
+}
+
+.notification-card .profile {
+  font-weight: bold;
+  color: black;
+  transition: 0.2s;
+}
+
+.notification-card span {
+  font-weight: bold;
+}
+
+.notification-card .profile:hover {
+  color: var(--CL-primary-blue);
+}
+
+.notification-card .card-image {
+  width: 4.5rem;
+  object-fit: cover;
+  height: 4.5rem;
+  margin: 0 1.5rem 0 0;
+}
+
+.notification-card .card-post {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0 1.5rem 0 0;
+}
+
+.notification-card .card-time {
+  color: var(--CL-neutral-500);
+  margin: 0.25rem 0;
+}
+
+.notification-card .card-text {
+  color: var(--CL-neutral-600);
+}
+
+.notification-card .card-message {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid var(--CL-neutral-300);
+  cursor: pointer;
+}
+
+.notification-card .card-message:hover {
+  background-color: var(--CL-neutral-300);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 5vh 0;
+  }
+}
